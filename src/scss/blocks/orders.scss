@@ -1,0 +1,34 @@
+.orders__item {
+  display: flex;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.orders__number {
+  margin-right: 78px;
+}
+
+.orders__progress-bar {
+  position: relative;
+  width: 242px;
+  height: 25px;
+  border-radius: 7px;
+  border: 1px solid #bfbfbf;
+}
+
+.orders__progress-fill {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border-radius: 7px;
+}
+
+.orders__progress-perc {
+  position: absolute;
+  top: 105%;
+  font-weight: bold;
+  font-size: 13px;
+  transform: translateX(-50%);
+}

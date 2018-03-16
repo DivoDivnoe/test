@@ -1,0 +1,62 @@
+extends ./_template
+
+block variables
+  -
+    var inCart = [
+      {
+        img: 'img/pepperoni.png',
+        title: 'Пицца Пепперони на тонком тесте',
+        ingredients: 'Пепперони, моцарелла, томатный соус',
+        quantity: '1'
+      },
+      {
+        img: 'img/pepperoni.png',
+        title: 'Пицца Пепперони на тонком тесте',
+        ingredients: 'Пепперони, моцарелла, томатный соус',
+        quantity: '1'
+      },
+      {
+        img: 'img/pepperoni.png',
+        title: 'Пицца Пепперони на тонком тесте',
+        ingredients: 'Пепперони, моцарелла, томатный соус',
+        quantity: '1'
+      }
+    ];
+
+    var orders = [
+      {
+        number: 3208957205790,
+        percents: 40
+      },
+      {
+        number: 3208957205789,
+        percents: 100
+      }
+    ];
+
+block content
+  section.cart
+    .container.cart-wrapper
+      ul.cart__list
+        each item in inCart
+          li.cart__item
+            .cart__picture
+              img.cart__image(src=item.img alt=item.title width="107" height="52")
+            .cart__title(title=item.title) #{item.title}
+            .cart__ingredients(title=item.ingredients) #{item.ingredients}
+            .cart__quantity
+              button.cart__quantity-btn.cart__quantity-btn--decrease
+              span.cart__quantity-num #{item.quantity}
+              button.cart__quantity-btn.cart__quantity-btn--increase
+            .cart__remove
+              button.cart__remove-btn Удалить
+  section.orders
+    .container.orders-wrapper
+      ul.orders__list
+        each item in orders
+          li.orders__item
+            .orders__number №#{item.number}
+            .orders__progress
+              .orders__progress-bar(data-progress=item.percents)
+                span.orders__progress-fill
+                span.orders__progress-perc
