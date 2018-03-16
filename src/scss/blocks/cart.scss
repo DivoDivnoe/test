@@ -121,12 +121,12 @@
 }
 
 .cart__remove-btn {
-  width: 82px;
-  height: 25px;
+  padding: 4px 15px;
+  line-height: 1.42;
   border-radius: 10px;
   background-color: transparent;
   border: 1px solid #a6a6a6;
   color: #a6a6a6;
-  cursor: pointer;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
